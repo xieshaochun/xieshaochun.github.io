@@ -481,21 +481,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
-        <h1 id="双向DCDC总体框架及优点"   >
-          <a href="#双向DCDC总体框架及优点" class="heading-link"><i class="fas fa-link"></i></a><a href="#双向DCDC总体框架及优点" class="headerlink" title="双向DCDC总体框架及优点"></a>双向DCDC总体框架及优点</h1>
-      <p> Buck 变换器只能降压，当输出电压恒定时，其效率随着输入电压的升高而降低；而 Boost 变换器只能升压，当输出电压恒定时，其效率随着输入电压的升高而升高。也就是说，Buck 变换器和 Boost 变换器都无法在整个输入电压范围内获得高效率。<br><img src="/assets/%E5%8F%8C%E5%90%91DCDC%E5%9F%BA%E6%9C%AC%E6%8B%93%E6%89%91.jpg" alt="拓扑图"><br> 双管 Buck-Boost 变换器不仅具有升降压的功能，还具有功率器件电压应力低，无源元件少以及输入输出极性相同等优点，适用于输入电压范围较宽的应用场合。例如电动车充电，当充电时外部电压高于电池电压，此时为BUCK模式；当放电时电池电压高于外部电压为BOOST模式。</p>
-
-        <h1 id="硬件思路"   >
-          <a href="#硬件思路" class="heading-link"><i class="fas fa-link"></i></a><a href="#硬件思路" class="headerlink" title="硬件思路"></a>硬件思路</h1>
-      <p><img src="/assets/DCDC%E6%8B%93%E6%89%91.jpg" alt="我的DCDC"><br>本设计也是基于四个mos管的拓扑，型号为 IRFB4110。</p>
-
-        <h1 id="控制思路"   >
-          <a href="#控制思路" class="heading-link"><i class="fas fa-link"></i></a><a href="#控制思路" class="headerlink" title="控制思路"></a>控制思路</h1>
-      
-        <h2 id="Ui》或《Uo"   >
-          <a href="#Ui》或《Uo" class="heading-link"><i class="fas fa-link"></i></a><a href="#Ui》或《Uo" class="headerlink" title="Ui》或《Uo"></a>Ui》或《Uo</h2>
-      <p>基于两管的驱动方式</p>
+                <h1 id="双向DCDC总体框架及优点"><a href="#双向DCDC总体框架及优点" class="headerlink" title="双向DCDC总体框架及优点"></a>双向DCDC总体框架及优点</h1><p> Buck 变换器只能降压，当输出电压恒定时，其效率随着输入电压的升高而降低；而 Boost 变换器只能升压，当输出电压恒定时，其效率随着输入电压的升高而升高。也就是说，Buck 变换器和 Boost 变换器都无法在整个输入电压范围内获得高效率。<br><img src="/assets/%E5%8F%8C%E5%90%91DCDC%E5%9F%BA%E6%9C%AC%E6%8B%93%E6%89%91.jpg" alt="拓扑图"><br> 双管 Buck-Boost 变换器不仅具有升降压的功能，还具有功率器件电压应力低，无源元件少以及输入输出极性相同等优点，适用于输入电压范围较宽的应用场合。例如电动车充电，当充电时外部电压高于电池电压，此时为BUCK模式；当放电时电池电压高于外部电压为BOOST模式。</p>
+<h1 id="硬件思路"><a href="#硬件思路" class="headerlink" title="硬件思路"></a>硬件思路</h1><p><img src="/assets/DCDC%E6%8B%93%E6%89%91.jpg" alt="我的DCDC"><br>本设计也是基于四个mos管的拓扑，型号为 IRFB4110。</p>
+<h1 id="控制思路"><a href="#控制思路" class="headerlink" title="控制思路"></a>控制思路</h1><h2 id="Ui》或《Uo"><a href="#Ui》或《Uo" class="headerlink" title="Ui》或《Uo"></a>Ui》或《Uo</h2><p>基于两管的驱动方式</p>
 <center  class="half">
     <img src="/assets/buck.jpg"  width="50%" align =left> <img src="/assets/boost.jpg"  width="50%" align =right>
 </center>
@@ -503,10 +491,7 @@
 buck模式下Q3关断，Q4常开。但是由于Q4是自举电路驱动的，外侧有自举电容，所以要将Q3暂时开小段时间，将自举电容充好电后便可打开Q4，关断Q3。之后交替导通Q1和Q2，由于Q1 Q2是同一个驱动，同一个PWM脉冲下，高电平Q1导通、低电平Q2导通而且Q1 Q2导通切换时应有死区也就是要有两个管子同时关断的时间区间。
 boost模式下也是如此，Q2暂时导通给自举电容充电后，导通Q1关断Q2。
 
-
-        <h2 id="Ui与Uo相近"   >
-          <a href="#Ui与Uo相近" class="heading-link"><i class="fas fa-link"></i></a><a href="#Ui与Uo相近" class="headerlink" title="Ui与Uo相近"></a>Ui与Uo相近</h2>
-      
+<h2 id="Ui与Uo相近"><a href="#Ui与Uo相近" class="headerlink" title="Ui与Uo相近"></a>Ui与Uo相近</h2>
                 
             </div>
             <hr/>
