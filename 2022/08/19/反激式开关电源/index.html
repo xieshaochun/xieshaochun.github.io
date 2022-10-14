@@ -482,7 +482,11 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="/assets/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90.jpg" alt="拓扑图"></p>
-<h1 id="整流滤波电路"><a href="#整流滤波电路" class="headerlink" title="整流滤波电路"></a>整流滤波电路</h1><h3 id="启动电路"><a href="#启动电路" class="headerlink" title="启动电路"></a>启动电路</h3><h3 id="震荡电路"><a href="#震荡电路" class="headerlink" title="震荡电路"></a>震荡电路</h3><h3 id="驱动电路"><a href="#驱动电路" class="headerlink" title="驱动电路"></a>驱动电路</h3><h3 id="MOS开关电路"><a href="#MOS开关电路" class="headerlink" title="MOS开关电路"></a>MOS开关电路</h3><h3 id="电流反馈电路"><a href="#电流反馈电路" class="headerlink" title="电流反馈电路"></a>电流反馈电路</h3><h3 id="输出整流滤波电路"><a href="#输出整流滤波电路" class="headerlink" title="输出整流滤波电路"></a>输出整流滤波电路</h3><h3 id="稳压反馈电路（原边-x2F-副边）"><a href="#稳压反馈电路（原边-x2F-副边）" class="headerlink" title="稳压反馈电路（原边&#x2F;副边）"></a>稳压反馈电路（原边&#x2F;副边）</h3>
+<p>220V的电通过保险丝F1和EMI的共模电感过滤掉前级干扰后<br>进入整流桥，给C2蓄能滤波后<br>经过R6 R7 R8分压后给VDD供电，启动芯片使能<br>R16决定IC的PWM频率后<br>GATE通过R12限流后打开Q1<br>T1原边线圈储能 当Q1关断后 电感产生一个上－下＋的电动势 R3与C3是为了消耗这个反向的电流防止流入开关管<br>T1副边感受到一个上＋下－的电压后输出滤波到负载<br>TL431将输出电压经过分压变成小电压 与2.5V的基准电压做比较<br>大于2.5V时流过光耦的电流增大，光强增大，意味着光耦内阻减小，PWM高电平减少<br>小于2.5V时情况相反<br>这时电压稳定后，VCC供电工作T1原边的小线圈感受到电压后通过R20 D3给芯片持续供电<br>D4 R10为Q1关断时的尖峰电压续流使Q1快速关断</p>
+<h3 id="整流滤波电路"><a href="#整流滤波电路" class="headerlink" title="整流滤波电路"></a>整流滤波电路</h3><p><img src="/assets/%E6%95%B4%E6%B5%81%E6%BB%A4%E6%B3%A2.png" alt="拓扑图"><br>C2电容两端电压为根号2的220v&#x3D;310v</p>
+<h3 id="启动电路"><a href="#启动电路" class="headerlink" title="启动电路"></a>启动电路</h3><p>启动电路作用于U3，启动IC</p>
+<h3 id="震荡电路"><a href="#震荡电路" class="headerlink" title="震荡电路"></a>震荡电路</h3><p>R16</p>
+<h3 id="驱动电路"><a href="#驱动电路" class="headerlink" title="驱动电路"></a>驱动电路</h3><h3 id="MOS开关电路"><a href="#MOS开关电路" class="headerlink" title="MOS开关电路"></a>MOS开关电路</h3><h3 id="电流反馈电路"><a href="#电流反馈电路" class="headerlink" title="电流反馈电路"></a>电流反馈电路</h3><h3 id="输出整流滤波电路"><a href="#输出整流滤波电路" class="headerlink" title="输出整流滤波电路"></a>输出整流滤波电路</h3><h3 id="稳压反馈电路（原边-x2F-副边）"><a href="#稳压反馈电路（原边-x2F-副边）" class="headerlink" title="稳压反馈电路（原边&#x2F;副边）"></a>稳压反馈电路（原边&#x2F;副边）</h3>
                 
             </div>
             <hr/>
