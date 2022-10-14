@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="开关电源元器件基本选型, 个人技术库">
+    <meta name="keywords" content="反激式开关电源, 个人技术库">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>开关电源元器件基本选型 | 个人技术库</title>
+    <title>反激式开关电源 | 个人技术库</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">开关电源元器件基本选型</h1>
+                    <h1 class="description center-align post-title">反激式开关电源</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%94%B5%E6%BA%90/">
+                                <span class="chip bg-color">电源</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                项目
+                            </a>
+                        
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/" class="post-category">
+                                反激式开关电源
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -443,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-22
+                    2022-08-19
                 </div>
                 
 
@@ -464,18 +481,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MOS管"><a href="#MOS管" class="headerlink" title="MOS管"></a>MOS管</h1><h3 id="1、VGs（th）开启电压"><a href="#1、VGs（th）开启电压" class="headerlink" title="1、VGs（th）开启电压"></a>1、VGs（th）开启电压</h3><p>温度越高 开启电压越小</p>
-<h3 id="2、VGs（最大栅源极电压）"><a href="#2、VGs（最大栅源极电压）" class="headerlink" title="2、VGs（最大栅源极电压）"></a>2、VGs（最大栅源极电压）</h3><p>驱动电压不能大于VGs</p>
-<h3 id="3、R-S-导通电阻"><a href="#3、R-S-导通电阻" class="headerlink" title="3、R(S)导通电阻"></a>3、R(S)导通电阻</h3><p>导通电阻越小，消耗能量越小</p>
-<h3 id="4、ID-导通电流"><a href="#4、ID-导通电流" class="headerlink" title="4、ID(导通电流)"></a>4、ID(导通电流)</h3><p>工作电流不能大于ID</p>
-<h3 id="5、VDSS-漏源击穿电压"><a href="#5、VDSS-漏源击穿电压" class="headerlink" title="5、VDSS(漏源击穿电压)"></a>5、VDSS(漏源击穿电压)</h3><p>VGs为0时所能承受的最大的漏源电压，若击穿会使导通电流剧增</p>
-<h3 id="6、Gfs正向跨导"><a href="#6、Gfs正向跨导" class="headerlink" title="6、Gfs正向跨导"></a>6、Gfs正向跨导</h3><p>栅极电压对导通电流的控制速度，过小关断能力弱，过快会产生电压尖峰，消除尖峰一般会加吸收电路</p>
-<h3 id="7、栅极充电时间"><a href="#7、栅极充电时间" class="headerlink" title="7、栅极充电时间"></a>7、栅极充电时间</h3><p>开关速度越快，损耗越小，但电压尖峰越高</p>
-<p><img src="/assets/mos%E7%AE%A1%E5%AF%84%E7%94%9F%E7%94%B5%E5%AE%B9.jpg" alt="mos管寄生电容"><br><img src="/assets/mos%E7%AE%A1%E7%94%B5%E9%98%BB.jpg" alt="mos管电阻"></p>
-<h4 id="R3"><a href="#R3" class="headerlink" title="R3"></a>R3</h4><p>mos管DS间R3是为了释放CGS及CGD的电容电流，防止DS有电压给CGS及CGD充电导致MOS导通<br>R3过大影响开关速度，过小寄生电容会引走过多电流增大驱动功率</p>
-<h4 id="R1"><a href="#R1" class="headerlink" title="R1"></a>R1</h4><p>R1与CGD，CGS形成RC充电电路减小瞬间电流</p>
-<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>几A电流，60V及以下电压 : SOT-23 SOT-223<br>100V70A  :TO-252<br>高压大电流 ：TO-220&#x2F;220F</p>
-
+                <p><img src="/assets/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90.jpg" alt="拓扑图"></p>
+<h1 id="整流滤波电路"><a href="#整流滤波电路" class="headerlink" title="整流滤波电路"></a>整流滤波电路</h1><h3 id="启动电路"><a href="#启动电路" class="headerlink" title="启动电路"></a>启动电路</h3><h3 id="震荡电路"><a href="#震荡电路" class="headerlink" title="震荡电路"></a>震荡电路</h3><h3 id="驱动电路"><a href="#驱动电路" class="headerlink" title="驱动电路"></a>驱动电路</h3><h3 id="MOS开关电路"><a href="#MOS开关电路" class="headerlink" title="MOS开关电路"></a>MOS开关电路</h3><h3 id="电流反馈电路"><a href="#电流反馈电路" class="headerlink" title="电流反馈电路"></a>电流反馈电路</h3><h3 id="输出整流滤波电路"><a href="#输出整流滤波电路" class="headerlink" title="输出整流滤波电路"></a>输出整流滤波电路</h3><h3 id="稳压反馈电路（原边-x2F-副边）"><a href="#稳压反馈电路（原边-x2F-副边）" class="headerlink" title="稳压反馈电路（原边&#x2F;副边）"></a>稳压反馈电路（原边&#x2F;副边）</h3>
                 
             </div>
             <hr/>
@@ -501,7 +508,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xieshaochun.github.io/2022/08/22/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E5%85%83%E5%99%A8%E4%BB%B6%E5%9F%BA%E6%9C%AC%E9%80%89%E5%9E%8B/">https://xieshaochun.github.io/2022/08/22/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E5%85%83%E5%99%A8%E4%BB%B6%E5%9F%BA%E6%9C%AC%E9%80%89%E5%9E%8B/</a>
+                    <a href="https://xieshaochun.github.io/2022/08/19/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">https://xieshaochun.github.io/2022/08/19/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -538,7 +545,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%94%B5%E6%BA%90/">
+                                    <span class="chip bg-color">电源</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -706,56 +717,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2022/08/22/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E5%85%83%E5%99%A8%E4%BB%B6%E5%9F%BA%E6%9C%AC%E9%80%89%E5%9E%8B/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="开关电源元器件基本选型">
-                        
-                        <span class="card-title">开关电源元器件基本选型</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-22
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            春申君
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/22/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90%E6%80%BB%E4%BD%93%E6%A1%86%E6%9E%B6/">
+                <a href="/2022/08/19/CAN%E6%80%BB%E7%BA%BF%E5%8D%8F%E8%AE%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="开关电源总体框架">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CAN总线协议">
                         
-                        <span class="card-title">开关电源总体框架</span>
+                        <span class="card-title">CAN总线协议</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -765,9 +737,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -776,8 +748,8 @@
                                     知识点
                                 </a>
                             
-                            <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/" class="post-category">
-                                    开关电源
+                            <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/CAN/" class="post-category">
+                                    CAN
                                 </a>
                             
                             
@@ -787,12 +759,66 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">
-                        <span class="chip bg-color">开关电源</span>
+                    <a href="/tags/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
+                        <span class="chip bg-color">通信协议</span>
                     </a>
                     
-                    <a href="/tags/%E7%9F%A5%E8%AF%86%E5%BC%95%E5%AF%BC/">
-                        <span class="chip bg-color">知识引导</span>
+                    <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">知识点总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/08/19/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="反激式开关电源">
+                        
+                        <span class="card-title">反激式开关电源</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                    项目
+                                </a>
+                            
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/%E5%8F%8D%E6%BF%80%E5%BC%8F%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/" class="post-category">
+                                    反激式开关电源
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%94%B5%E6%BA%90/">
+                        <span class="chip bg-color">电源</span>
                     </a>
                     
                 </div>
