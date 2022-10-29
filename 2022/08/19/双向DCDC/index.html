@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="双向DCDC, 个人技术库">
+    <meta name="keywords" content="双向DCDC(输入12-64V 输出5-60V  输入输出电压取48V 最大输出电流6.5A), 个人技术库">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>双向DCDC | 个人技术库</title>
+    <title>双向DCDC(输入12-64V 输出5-60V  输入输出电压取48V 最大输出电流6.5A) | 个人技术库</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">双向DCDC</h1>
+                    <h1 class="description center-align post-title">双向DCDC(输入12-64V 输出5-60V  输入输出电压取48V 最大输出电流6.5A)</h1>
                 </div>
             </div>
         </div>
@@ -491,7 +491,11 @@
 buck模式下Q3关断，Q4常开。但是由于Q4是自举电路驱动的，外侧有自举电容，所以要将Q3暂时开小段时间，将自举电容充好电后便可打开Q4，关断Q3。之后交替导通Q1和Q2，由于Q1 Q2是同一个驱动，同一个PWM脉冲下，高电平Q1导通、低电平Q2导通而且Q1 Q2导通切换时应有死区也就是要有两个管子同时关断的时间区间。
 boost模式下也是如此，Q2暂时导通给自举电容充电后，导通Q1关断Q2。
 
-<h2 id="Ui与Uo相近"><a href="#Ui与Uo相近" class="headerlink" title="Ui与Uo相近"></a>Ui与Uo相近</h2>
+<h2 id="Ui与Uo相近"><a href="#Ui与Uo相近" class="headerlink" title="Ui与Uo相近"></a>Ui与Uo相近</h2><h1 id="各元器件选型"><a href="#各元器件选型" class="headerlink" title="各元器件选型"></a>各元器件选型</h1><h2 id="电感选型"><a href="#电感选型" class="headerlink" title="电感选型"></a>电感选型</h2><p>buck 模式：L&#x3D;{Ui×(1-D)D}&#x2F;（f×K×IOmax）&#x3D;30uH  ui&#x3D;48V  D&#x3D;0.5 f&#x3D;200K  K&#x3D;0.3  IOmax&#x3D;6.5A<br>boost 模式：L&#x3D;{UO×(1-D)D}&#x2F;（f×K×IOmax）&#x3D;30uH  uO&#x3D;48V  D&#x3D;0.5 f&#x3D;200K  K&#x3D;0.3  IOmax&#x3D;6.5A<br>输出电压纹波（▲U0）&#x3D;输出电压（48V）×百分之0.5（50mV）&#x3D;0.24V<br>输入输出电容容值&#x3D;▲I&#x2F;(f×▲U0×8)&#x3D;5.2uF</p>
+<h2 id="mos管："><a href="#mos管：" class="headerlink" title="mos管："></a>mos管：</h2><p>输入电压输出电压最高60V,选型100V耐压的IRFB4110的功率管，开启电压在2-4V,栅极最大电压是20V,电源最大峰值电流在6.5*根号2&#x3D;10A，此功率管的最大通流120A 符合要求</p>
+<h2 id="驱动设计："><a href="#驱动设计：" class="headerlink" title="驱动设计："></a>驱动设计：</h2><p>芯片选择IR2110,输出电压10-20V 电流2A</p>
+<h2 id="自举电容："><a href="#自举电容：" class="headerlink" title="自举电容："></a>自举电容：</h2><p>大于2Qg&#x2F;(VCC-10-1.5)   vcc&#x3D;12V  vGS&#x3D;10v时 Qg&#x3D;150nc  电容应大于0.6uf 选择1Uf的电容 又因为vGS&#x3D;10v 耐压选择16V</p>
+
                 
             </div>
             <hr/>
