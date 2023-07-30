@@ -486,7 +486,23 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/%E7%8E%AF%E8%B7%AF431.jpg" alt="环路分析"></p>
-<p>将  TL431  等效为一个运放</p>
+<p>TL431内部电路如下图 当外部电压REF大于 内部基准电压时运放为+<br>输出三极管电压下降</p>
+<p><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/TL431%E5%86%85%E9%83%A8%E5%9B%BE.jpg" alt="TL431内部图"></p>
+<p>所以可以将TL431等效成基准电压接+<br>外部电压接反相端的电路因为本来就是与电压增长反向变化的量<br>如下图<br><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/TL431%E7%AD%89%E6%95%88%E8%BF%90%E6%94%BE.jpg" alt="TL431等效运放"></p>
+<p>接下来将光耦等效</p>
+<p><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/%E5%85%89%E8%80%A6.jpg" alt="光耦"></p>
+<p>上图是光耦的内部图，所以先计算光耦原边的发射电流IF， 然后根据光耦手册的电流传输比CTR，求出<br>接收端IC，最后乘以电阻RL就能得到 反馈到FB脚的电压<br>而想要求出IF就得把发射端等效，发射端本质就是二极管 可以等效成下图的导通压降VF+动态电阻rd<br>rd是动态电阻可以通过规格书的VF与IF的不同温度曲线求出<br>但Rled和Rbias一般都在KΩ  可以将rd去掉  光耦原边发射端等效成VF<br><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/IF.jpg" alt="IF"></p>
+<p>最后可以将环路等效成下图，并且可以求出输出电压变化量和FB上电压变化量的关系</p>
+<p><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/%E8%BF%90%E6%94%BE%E7%AD%89%E6%95%88.jpg" alt="运放等效"></p>
+<p>如下图电路稳定后，1、当Vout增加了△Vo<br><img src="/assets/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/%E7%94%B5%E5%8E%8B%E5%8F%98%E5%8C%96.jpg" alt="电压变化"></p>
+<p>2、根据运放的“虚短”，负相端电压为2.5V不变，那么R1增加的电流为：△Vo&#x2F;R1</p>
+<p>3、负相端电压2.5V不变，那么Rlower的电流不会有变化；同时根据运放的“虚断”，负相端节点电流一直为0，即不会变化；根据运放的负相端节点电流总和为0，那么R1增加的电流是从Zc流过，即Zc的电流增加量也为：△Vo&#x2F;R1。</p>
+<p>4、Zc电流增加了△Vo&#x2F;R1，那么意味着Zc两端电压增加了：△Vo<em>Zc&#x2F;R1，而Zc右边电压为2.5V不变，那么只有可能是Zc左边的电压发生了变化，变化量为：-△Vo</em>Zc&#x2F;R1。因为Zc的电流是往左增大，所以Zc左边的电压是减小的，所以加了一个负号。<br>5、Zc左边的电压，也就是放大器的输出电压，即放大器输出端电压增加了：-△Vo*Zc&#x2F;R1。</p>
+<p>6、运放输出端电压增加了-△Vo<em>Zc&#x2F;R1，Rbias两端电压为VF不变，那么RLed下端的电压也就增加了-△Vo</em>Zc&#x2F;R1，而Rled上端电压增加了△Vo，因此，RLed两端电压增加了：△Vo-(-△Vo*Zc&#x2F;R1)&#x3D;(1+Zc&#x2F;R1)*△Vo</p>
+<p>7、知道了Rled的电压增量，那么Rled的电流增量为：(1+Zc&#x2F;R1)*△Vo&#x2F;Rled</p>
+<p>8、又因为Vf恒定不变，那么Rbias的电流恒定不变，所以Rled的电流增量全部流过二极管。即二极管的电流增量为：△If&#x3D; (1+Zc&#x2F;R1)*△Vo&#x2F;Rled</p>
+<p>9、二极管电流增量为△If，那么光耦的晶体管电流增量为：△Ic&#x3D;CTR<em>△If&#x3D; CTR</em> (1+Zc&#x2F;R1)*△Vo&#x2F;Rled</p>
+<p>Rpullup的电流增量也为△Ic，那么Rpullup两端的电压增量为△Ic<em>Rpullup，这个电压增量也就是Verr的电压减小量，所以△Verr&#x3D;- CTR</em> (1+Zc&#x2F;R1)<em>△Vo</em>Rpullup&#x2F;Rled，我们把公式变换下，即：△Verr&#x2F;△Vo&#x3D;- CTR* (1+Zc&#x2F;R1) *Rpullup&#x2F;Rled，至此，我们的传递函数就求出来了。</p>
 
                 
             </div>
@@ -726,18 +742,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/07/25/%E7%94%B5%E6%BA%90%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/">
+                <a href="/2023/07/30/%E7%94%B5%E6%BA%90%E7%8E%AF%E8%B7%AF%E8%AE%A1%E7%AE%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="TL431＋光耦等效环路分析（传递函数）">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="TL431＋光耦环路计算（传递函数）">
                         
-                        <span class="card-title">TL431＋光耦等效环路分析（传递函数）</span>
+                        <span class="card-title">TL431＋光耦环路计算（传递函数）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,9 +762,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -758,15 +773,14 @@
                                     知识点
                                 </a>
                             
-                            <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/TL431/" class="post-category">
-                                    TL431
+                            <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/%E7%8E%AF%E8%B7%AF%E8%AE%A1%E7%AE%97/" class="post-category">
+                                    环路计算
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -774,8 +788,8 @@
                         <span class="chip bg-color">电源</span>
                     </a>
                     
-                    <a href="/tags/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90/">
-                        <span class="chip bg-color">电路分析</span>
+                    <a href="/tags/%E7%8E%AF%E8%B7%AF%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">环路分析</span>
                     </a>
                     
                 </div>
